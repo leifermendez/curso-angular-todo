@@ -1,0 +1,77 @@
+.wrapper-login-page{
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+}
+
+.wrapper-login-form{
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 0;
+    justify-content: center;
+}
+
+.logo{
+    height: 45px;
+}
+
+.text-label{
+    font-weight: 600;
+    color:var(--color-4);
+    font-size: 16px;
+}
+
+.login-form{
+    background-color: white;
+    padding: 2rem 1rem;
+    box-shadow: var(--box-shadow-1);
+    min-width: 350px;
+    min-height: 320px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form .form{
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    align-items: center;
+}
+
+.form-input{
+    width: 100%;
+    display: flex;
+}
+
+.form-input input{
+    border:solid 2px #DFE1E6;
+    background-color: #FAFBFC;
+    height: 40px;
+    border-radius: var(--border-radius);
+    padding: 0 .5rem;
+    width: 100%;
+}
+
+input.ng-invalid.ng-touched{
+    border-color:tomato
+}
+
+.logo-icon{
+    font-size: 3rem;
+}
+
+.footer-image{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 320px;
+    width: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../../../../assets//images/undraw_completed_tasks_vs6q.svg')
+}

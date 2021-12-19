@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --color-1: #026AA7;
+    --color-2: #E4F0F6;
+    --color-3: #FAFBFC;
+    --color-4: #5E6C84;
+    --color-5: #4ca03b;
+    --font-family-1: 'Roboto', sans-serif;
+    --box-shadow-1: rgb(0 0 0 / 10%) 0 0 10px;
+    --font-size-1: 1rem;
+    --font-size-2: 1.2rem;
+    --border-radius:3px
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-3);
+    font-family: var(--font-family-1);
+}
+
+input, button{
+    font-family: var(--font-family);
+}
+
+button{
+    cursor: pointer;
+    border:0;
+    background-color: transparent;
+}
+
+.btn-primary{
+    width: 100%;
+    color: white;
+    border-radius: var(--border-radius);
+    background-color: var(--color-5);
+    padding: .5rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.btn-default{
+    width: 100%;
+    padding: .65rem;
+    font-weight: 600;
+    box-shadow: var(--box-shadow-1);
+}
+
+
+button:disabled{
+    opacity: .5;
+}

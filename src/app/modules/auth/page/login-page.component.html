@@ -1,0 +1,36 @@
+<div class="wrapper-login-form">
+    <div class="login-form">
+        <div>
+            <i class="logo-icon uil uil-visual-studio"></i>
+        </div>
+        <div class="text-label">
+            Iniciar sesión
+        </div>
+        
+
+        <form [formGroup]="loginForm" (submit)="sendCredentials()" class="form">
+            <div class="form-input">
+                <input formControlName="email" 
+                type="text" placeholder="Introduzca el correo electrónico">
+            </div>
+            <div class="form-input">
+                <input formControlName="password" 
+                type="password" placeholder="Introduzca la contraseña">
+            </div>
+            <div class="form-input">
+                <button [disabled]="loginForm.invalid" class="btn-primary">Iniciar sesión</button>
+            </div>
+            <div>o</div>
+            <div class="form-input">
+                <button class="btn-default"><i class="uil uil-google"></i> Continuar con Google</button>
+            </div>
+            <div class="form-input">
+                <button class="btn-default"><i class="uil uil-windows"></i> Continuar con Microsoft</button>
+            </div>
+            <div class="form-input">
+                <button  class="btn-default"><i class="uil uil-apple"></i> Continuar con Apple</button>
+            </div>
+        </form>
+
+    </div>
+</div>
