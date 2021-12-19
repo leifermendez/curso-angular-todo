@@ -47,6 +47,10 @@
     display: flex;
 }
 
+.form-input input::placeholder{
+    color: rgba(0,0,0,.4)
+}
+
 .form-input input{
     border:solid 2px #DFE1E6;
     background-color: #FAFBFC;
