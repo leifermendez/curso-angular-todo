@@ -52,4 +52,42 @@ button{
 
 button:disabled{
     opacity: .5;
+    background-color: var(--color-4);
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-grid{
+    display: grid;
+}
+
+.d-all-center{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-label{
+    font-weight: 600;
+    color:var(--color-4);
+    font-size: 16px;
+}
+
+.form-input{
+    width: 100%;
+    display: flex;
+}
+
+.form-input input::placeholder{
+    color: rgba(0,0,0,.4)
+}
+
+input.ng-invalid.ng-touched{
+    border-color:tomato
 }
