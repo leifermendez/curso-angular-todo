@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskPageComponent implements OnInit {
 
+  case:number = 5800;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }

@@ -1,0 +1,85 @@
+:host {
+    --navbarHeight: 60px
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    border-bottom: solid 1px #E2E1E0;
+    align-items: center;
+    align-content: center;
+    height: var(--navbarHeight);
+    position: relative;
+}
+
+.navbar .logo-section {
+    gap: 5rem;
+}
+
+.navbar .menu ul {
+    position: relative;
+    height: var(--navbarHeight);
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.navbar .menu ul li {
+    cursor: pointer;
+    border-bottom: solid 1px transparent;
+    height: 100%;
+    font-weight: 600;
+    opacity: .5;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.navbar .menu ul li:hover {
+    opacity: .8;
+}
+
+.navbar .menu ul li.active {
+    border-bottom: solid 2px var(--color-1);
+    opacity: 1;
+}
+
+.navbar .logo {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.user-section {
+    gap: 1.5rem;
+}
+
+.user-section .notifications .uil {
+    font-size: 28px;
+}
+
+.user-section .notifications .count {
+    position: absolute;
+    background-color: var(--color-1);
+    font-size: 70%;
+    width: 16px;
+    height: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 8px;
+    color: white;
+    border: solid 2px white
+}
+
+.user-section .avatar img {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    object-fit: cover;
+}

@@ -1,0 +1,22 @@
+<div class="navbar">
+    <div class="d-flex logo-section d-all-center">
+        <div class="logo">Task</div>
+        <div class="menu">
+            <ul>
+                <li 
+                *ngFor="let item of menu;let primero = first">
+                    {{item.name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="d-flex d-all-center user-section">
+        <div class="notifications">
+            <span class="count">5</span>
+            <i class="uil uil-bell"></i>
+        </div>
+        <div class="avatar d-all-center d-flex">
+            <img src="https://avatars.githubusercontent.com/u/15802366?v=4" alt="">
+        </div>
+    </div>
+</div>
