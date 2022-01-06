@@ -1,5 +1,60 @@
-.imagen{
-    width: 200px;
-    height: 200px;
-    background-color: rgb(205, 205, 255);
+.task-columns {
+    position: relative;
+    /* background-color: rgba(255, 0, 0, 0.103); */
+    display: flex;
+    flex-wrap: wra;
+    flex-direction: row;
+    gap: .25rem;
+    overflow-x: auto;
+    min-height: 500px;
+    padding: 0 1rem;
+}
+
+.cdk-drag-placeholder {
+    position: relative;
+    opacity: 1;
+    display: block;
+    width: 20rem;
+    transition: all ease 230ms;
+    cursor: move;
+    border-radius: 15px;
+}
+
+.cdk-drag-placeholder:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #DFDEDC;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+}
+
+.cdk-drag-preview {
+    display: block;
+    width: 500px;
+    transition: all ease 150ms;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.cdk-drag-preview {
+    background-color: var(--color-secondary);
+    transition: all ease 150ms;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+/* Animate items as they're being sorted. */
+
+.cdk-drop-list-dragging .cdk-drag {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+
+/* Animate an item that has been dropped. */
+
+.cdk-drag-animating {
+    transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
 }

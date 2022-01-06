@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div class="new-task">
+        <form [formGroup]="newTask" (ngSubmit)="saveTask()">
+            <div class="form-input">
+                <label>Titulo</label>
+                <input formControlName="order" type="text">
+            </div>
+
+            <ng-container formArrayName="item" *ngFor="let field of getItems();let i = index" >
+                <div class="form-input" 
+                [formGroupName]="i">
+                    <label>{{field?.value?.key}}</label>
+                    <input formControlName="value" type="text">
+                </div>
+        
+            </ng-container>
+          
+            <div class="form-input">
+                <button class="btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>

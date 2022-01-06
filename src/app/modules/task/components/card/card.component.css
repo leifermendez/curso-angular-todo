@@ -1,0 +1,41 @@
+:host {
+    display: block;
+}
+
+.card {
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    min-height: 100px;
+    padding: .75rem
+}
+
+.card .title {
+    font-weight: 600;
+}
+
+.card .body {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem
+}
+
+.card .body li {
+    display: flex;
+    gap: .25rem;
+    font-size: 90%;
+}
+
+.card .body li span {
+    font-weight: 400;
+}
+
+.card .avatar-small {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+}

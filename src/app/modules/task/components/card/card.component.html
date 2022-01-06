@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="title" #refId>Nº {{idOrder}}</div>
+    <ul class="body">
+        <ng-container *ngFor="let item of items">
+            <li *ngIf="['price','time'].includes(item.key)">
+                <i class="uil" [ngClass]="{
+                    'uil-credit-card':item.key == 'price',
+                    'uil-clock':item.key == 'time'
+                }"></i>
+                <span>{{item.value}}</span>
+            </li>
+            <li *ngIf="['author'].includes(item.key)">
+                <img class="avatar-small" [src]="item.value.avatar" alt="">
+                <span>{{item.value.name}}</span>
+            </li>
+        </ng-container>
+
+    </ul>
+    <button (click)="sendData()">Enviar datos a header</button>
+</div>

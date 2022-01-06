@@ -1,0 +1,18 @@
+<div class="column display-flex">
+    <div class="label-column display-flex ">
+        <span class="circle" [style.backgroundColor]="'red'"></span>
+        <span class="name">{{name}} 
+            <span class="number">({{data.length}})</span></span>
+    </div>
+    <div class="label-column display-flex ">
+        <!-- <ui-btn icon="uil uil-ellipsis-h" color="transparent"></ui-btn> -->
+    </div>
+</div>
+
+<div class="column">
+    <app-card  
+     [items]="card.items"
+     [idOrder]="card.order" 
+     *ngFor="let card of data">
+</app-card>
+</div>

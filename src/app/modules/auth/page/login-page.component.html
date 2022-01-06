@@ -1,42 +1,40 @@
 <div class="wrapper-login-form d-flex d-all-center">
 
-        <!-- <ng-container [ngTemplateOutlet]="test"></ng-container> -->
-        <app-register-form></app-register-form>
 
-
-</div>
-
-<ng-template #test>
     <div class="login-form">
-    <div class="d-flex d-all-center">
-        <i class="logo-icon uil uil-apps"></i>
+        <div class="d-flex d-all-center">
+            <i class="logo-icon uil uil-apps"></i>
+        </div>
+    
+        <div class="text-label d-flex d-all-center">
+            Iniciar sesión
+        </div>
+        <form [formGroup]="loginForm" (submit)="sendCredentials()" class="form d-flex">
+            <div class="form-input">
+                <input formControlName="email" 
+                type="text" placeholder="Introduzca el correo electrónico">
+            </div>
+            <div class="form-input">
+                <input formControlName="password" 
+                type="password" placeholder="Introduzca la contraseña">
+            </div>
+            <div class="form-input">
+                <button [disabled]="loginForm.invalid" class="btn-primary">Iniciar sesión</button>
+            </div>
+            <div>o</div>
+            <div class="form-input">
+                <button class="btn-default"><i class="uil uil-google"></i> Continuar con Google</button>
+            </div>
+            <div class="form-input">
+                <button class="btn-default"><i class="uil uil-windows"></i> Continuar con Microsoft</button>
+            </div>
+            <div class="form-input">
+                <button  class="btn-default"><i class="uil uil-apple"></i> Continuar con Apple</button>
+            </div>
+        </form>
     </div>
 
-    <div class="text-label d-flex d-all-center">
-        Iniciar sesión
-    </div>
-    <form [formGroup]="loginForm" (submit)="sendCredentials()" class="form d-flex">
-        <div class="form-input">
-            <input formControlName="email" 
-            type="text" placeholder="Introduzca el correo electrónico">
-        </div>
-        <div class="form-input">
-            <input formControlName="password" 
-            type="password" placeholder="Introduzca la contraseña">
-        </div>
-        <div class="form-input">
-            <button [disabled]="loginForm.invalid" class="btn-primary">Iniciar sesión</button>
-        </div>
-        <div>o</div>
-        <div class="form-input">
-            <button class="btn-default"><i class="uil uil-google"></i> Continuar con Google</button>
-        </div>
-        <div class="form-input">
-            <button class="btn-default"><i class="uil uil-windows"></i> Continuar con Microsoft</button>
-        </div>
-        <div class="form-input">
-            <button  class="btn-default"><i class="uil uil-apple"></i> Continuar con Apple</button>
-        </div>
-    </form>
+        <!-- <app-register-form></app-register-form> -->
+
+
 </div>
-</ng-template>

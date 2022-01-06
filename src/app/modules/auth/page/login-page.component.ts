@@ -1,5 +1,8 @@
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
+import { CookieService } from 'ngx-cookie';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -10,7 +13,7 @@ export class LoginPageComponent implements OnInit {
 
   loginForm:FormGroup = new FormGroup({});
 
-  constructor() { }
+  constructor(private authService:AuthService, private router:Router) { }
 
   ngOnInit(): void {
 
@@ -27,6 +30,10 @@ export class LoginPageComponent implements OnInit {
 
   sendCredentials():void{
     const body = this.loginForm.value;
+    this.authService.submitLogin(body)
+    .subscribe((response) => {
+      this.router.navigate(['/','task'])
+    })
     console.log(body)
   }
 

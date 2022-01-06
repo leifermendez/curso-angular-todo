@@ -1,0 +1,63 @@
+:host {
+    display: block;
+}
+
+.column {
+    padding: .5rem;
+    width: 20rem;
+    justify-content: space-between;
+}
+
+.column .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+}
+
+.column .label-column {
+    gap: .5rem
+}
+
+.column .name {
+    font-weight: 500;
+}
+
+.column .number {
+    font-weight: 400;
+    opacity: .8;
+}
+
+.cdk-drag-placeholder {
+    position: relative;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    transition: all ease 230ms;
+    cursor: move;
+    border-radius: 15px;
+}
+
+.cdk-drag-placeholder:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #DFDEDC;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+}
+
+.cdk-drag-preview {
+    display: block;
+    width: 500px;
+    transition: all ease 150ms;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.cdk-drag-preview .card {
+    transition: all ease 150ms;
+    transform: rotate(3deg);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
